@@ -1,0 +1,29 @@
+ //http://www.sitepoint.com/basic-jquery-form-validation-tutorial/
+   $("#myform").validate({
+    rules: {
+     firstname: "required",
+     lastname: "required",
+     email: {
+      required: true,
+      email: true
+     },
+     password: {
+      required: true,
+      minlength: 8
+     },
+					 elfogad: {
+      required: true,
+     },
+    },
+    messages: {
+     firstname: " Írd be a keresztneved!",
+     lastname: " Írd be a vezetékneved!",
+     password: {
+      required: " Add meg a jelszavad!",
+      minlength: " A jelszavad legalább 8 karakter hosszú legyen!"
+     },
+     email: " Kérlek valós email címet adj meg!",
+					elfogad: " Kérlek fogadd el a feltételeinket!",
+    },
+   });
+ });
