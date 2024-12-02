@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kalocsai_Balazs">
+	<meta name="description" content="Kisecset egészségügyi szolgáltatásainak weboldala.">
+    <title>Kisecseti Rendelő</title>
+    <link href="../CSS/01_Rendelo.css" rel="stylesheet">
+    <link rel="icon" href="../Kepek/Ikonok/fav_ikon.png" type="image/x-icon">
+    <script src="../JS/orvos.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Kisecseti Rendelő</h1>
+    </header>
+    <div class="container">
+        <div class="nav_01">
+            <nav>
+                <ul>
+                    <li class="gomb_01"><a class="gomb_02" href="01_Rendelo.html">Főoldal<img class="nav_ikon" src="../Kepek/Ikonok/falu_ikon.png" alt="Falu ikon"></a></li>
+                    <li class="gomb_01 actual"><a class="gomb_02" href="#">Orvos<img class="nav_ikon" src="../Kepek/Ikonok/orvos_ikon.png" alt="Fonendoszkóp ikon"></a></li>
+                    <li class="gomb_01"><a class="gomb_02" href="../HTML/03_Fogorvos.html">Fogász<img class="nav_ikon" src="../Kepek/Ikonok/fogorvos_ikon.png" alt="Fog ikon"></a></li>
+                    <li class="gomb_01"><a class="gomb_02" href="../HTML/04_Arlista.html">Árlista<img class="nav_ikon" src="../Kepek/Ikonok/arlista_ikon.png" alt="Forint ikon"></a></li>
+                </ul>
+            </nav>
+        </div>
+            <table class="orv_assz_tabl">
+                <tr>
+                    <td colspan="2" class="tabla_cim">Egészségügyi szakembereink</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="kepcsere1" class="tabla_kep arckep" src="../Kepek/Orvos/Doktorno_negyzet.jpg" alt="Dr. Bérgoró Kata">
+                        <button class="infogomb" id="megjelenit1">Infomrációk megjelenítése</button>
+                        <button class="infogomb" id="elrejt1">Kép megjelenítése</button>
+
+                    </td>
+                    <td>
+                        <img id="kepcsere2" class="tabla_kep arckep" src="../Kepek/Orvos/asszisztens_negyzet.jpg" alt="Tisztaházy Mária">
+                        <button class="infogomb" id="megjelenit2">Infomrációk megjelenítése</button>
+                        <button class="infogomb" id="elrejt2">Kép megjelenítése</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nevek">Dr. Bérgoró Kata háziorvos</td>
+                    <td class="nevek">Tisztaházy Mária asszisztens</td>
+                </tr>
+            </table>
+            <script src="../JS/orvos.js"></script>
+            <div class="nyitvatart_container">
+                <table class="nyitvatartas">
+                    <tr>
+                        <td colspan="2" class="tabla_cim">Nyitvatartás:</td>
+                    </tr>
+                    <tr>
+                        <td>Hétfő</td>
+                        <td>8:00-14:00</td>
+                    </tr>
+                    <tr>
+                        <td>Kedd</td>
+                        <td>12:00-18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Szerda</td>
+                        <td>8:00-14:00</td>
+                    </tr>
+                    <tr>
+                        <td>Csütörtök</td>
+                        <td>8:00-14:00</td>
+                    </tr>
+                    <tr>
+                        <td>Péntek</td>
+                        <td>8:00-14:00</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="tabla_cim">Rendelő: Kisecset, Kossuth út 3.</p>
+            <div class="terkep">
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.1598535811164!2d19.41768827601002!3d47.99588977124671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474079212b60a89f%3A0xe51764050a6bbf03!2sKisecset%2C%20Kossuth%20%C3%BAt%203%2C%202651!5e0!3m2!1sen!2sus!4v1690826649142!5m2!1sen!2sus"
+                
+                height="450"
+                style="border:0;"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div>
+            
+    </div>
+    <footer>Tanulmányi célokra készített weboldal. 2024.</footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Kalocsai_Balazs">
+        <meta name="description" content="Kisecset egészségügyi szolgáltatásainak weboldala.">
+        <title>Kisecseti Rendelő</title>
+        <link href="../CSS/01_Rendelo.css" rel="stylesheet">
+        <link rel="icon" href="../Kepek/Ikonok/fav_ikon.png" type="image/x-icon">
+    </head>
+<body>
+    <header>
+        <h1>Kisecseti Rendelő</h1>
+    </header>
+    <div class="container">
+        <div class="nav_01">
+            <nav>
+                <ul>
+                    <li class="gomb_01"><a class="gomb_02" href="01_Rendelo.html">Főoldal<img class="nav_ikon" src="../Kepek/Ikonok/falu_ikon.png" alt="Falu ikon"></a></li>
+                    <li class="gomb_01"><a class="gomb_02" href="../HTML/02_Orvos.html">Orvos<img class="nav_ikon" src="../Kepek/Ikonok/orvos_ikon.png" alt="Fonendoszkóp ikon"></a></li>
+                    <li class="gomb_01"><a class="gomb_02" href="../HTML/03_Fogorvos.html">Fogász<img class="nav_ikon" src="../Kepek/Ikonok/fogorvos_ikon.png" alt="Fog ikon"></a></li>
+                    <li class="gomb_01 actual"><a class="gomb_02" href="#">Árlista<img class="nav_ikon" src="../Kepek/Ikonok/arlista_ikon.png" alt="Forint ikon"></a></li>
+                </ul>
+            </nav>
+        </div>
+        
+            <form class="urlap_container" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
+                <table class="urlap_resz">
+                    <tr>
+                        <td class="tabla_cim">Háziorvosi rendelő</td>
+                    </tr>
+                    <tr>
+                        <td class="arak">
+                            <label>
+                                Név: <input autofocus type="text" name="nev">
+                            </label><br>
+                            <p>Vérnyomás:</p>
+                            <label>
+                                <input type="radio" name="vernyomas" value="vnym_01">100 alatt
+                            </label><br>
+                            <label>
+                                <input type="radio" name="vernyomas" value="vnym_02">100-120
+                            </label><br>
+                            <label>
+                                <input type="radio" name="vernyomas" value="vnym_03">120-140
+                            </label><br>
+                            <label>
+                                <input type="radio" name="vernyomas" value="vnym_04">140-160
+                            </label><br>
+                            <label>
+                                <input type="radio" name="vernyomas" value="vnym_05">160 felett
+                            </label><br>
+                            <p>Elmúlt 7 nap közérzete:</p>
+                            Rossz<input name="kozerzet" type="range" min="0" max="10" step ="1" value ="5">Jó<br>
+                            Sport <input type="text" list="sportok" name="sport" placeholder="Adja meg, ha sportol">
+                            <datalist id="sportok">
+                                <option value="Kajak">
+                                <option value="Futás">
+                                <option value="Úszás">
+                                <option value="Kosárlabda">
+                                <option value="Futball">
+                            </datalist>
+                        </td>
+                    </tr>
+                </table>
+                <table class="urlap_resz">
+                    <tr>
+                        <td class="tabla_cim">Fogorvosi rendelő</td>
+                    </tr>
+                    <tr>
+                        <td class="arak">
+                            <label><input type="checkbox" id="kezeles_01" name="kezeles_01" value="igeny">Fogkő-eltávolítás és polírozás - 20 000Ft<br></label>
+                            <label><input type="checkbox" id="kezeles_02" name="kezeles_02" value="igeny">Fogtömés - 23 000Ft<br></label>
+                            <label><input type="checkbox" id="kezeles_03" name="kezeles_03" value="igeny">Gyökérkezelés (1 csatornás fog) - 32 000Ft<br></label>
+                            <label><input type="checkbox" id="kezeles_04" name="kezeles_04" value="igeny">Fogfehérítés - 73 000Ft<br></label>
+                            <label><input type="checkbox" id="kezeles_05" name="kezeles_05" value="igeny">Fogászati implantátum - 263 000Ft<br></label>
+                            <label><input type="checkbox" id="kezeles_06" name="kezeles_06" value="igeny">Fogeltávolítás - 13 000Ft<br></label>
+                            <label><input type="checkbox" id="kezeles_07" name="kezeles_07" value="igeny">Éjszakai harapásemelő sín - 41 000Ft<br></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="infogomb" type="button" id="osszeg" value="Összesen">
+                            <input type="text" name="rend_ertek" id="eredmeny">Ft
+                        </td>
+                    </tr>
+                </table>
+                <table class="urlap_resz">
+                <tr>
+                    <td>
+                        <button class="infogomb" type="submit" id="elkuld">Elküldés</button>
+                    </td>
+                    <td>
+                        <button class="infogomb" type="reset">Visszaállítás</button>
+                    </td>
+                </tr>
+                </table>
+            </form>
+            <script src="../JS/fogorvos_rendeles.js" ></script>
+        
+    </div>
+    <footer>Tanulmányi célokra készített weboldal. 2024.</footer>
+</body>
+</html>
