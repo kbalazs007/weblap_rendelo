@@ -5,9 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Kalocsai_Balazs">
         <meta name="description" content="Kisecset egészségügyi szolgáltatásainak weboldala.">
+        <script src="../Form_validator/jquery-3.7.1.min.js"></script>
+        <script src="../Form_validator/dist/jquery.validate.min.js"></script>
         <title>Kisecseti Rendelő</title>
         <link href="../CSS/01_Rendelo.css" rel="stylesheet">
         <link rel="icon" href="../Kepek/Ikonok/fav_ikon.png" type="image/x-icon">
+        <style>
+            label.error{
+                color: brown;
+            }
+        </style>
     </head>
 <body>
     <header>
@@ -25,7 +32,7 @@
             </nav>
         </div>
         
-            <form class="urlap_container" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
+            <form class="urlap_container" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="urlap" novalidate>
                 <table class="urlap_resz">
                     <tr>
                         <td class="tabla_cim">Háziorvosi rendelő</td>
@@ -34,6 +41,9 @@
                         <td class="arak">
                             <label>
                                 Név: <input autofocus type="text" name="nev">
+                            </label><br>
+                            <label>
+                                Email: <input type="text" name="email">
                             </label><br>
                             <p>Vérnyomás:</p>
                             <label>
@@ -52,8 +62,9 @@
                                 <input type="radio" name="vernyomas" value="vnym_05">160 felett
                             </label><br>
                             <p>Elmúlt 7 nap közérzete:</p>
-                            Rossz<input name="kozerzet" type="range" min="0" max="10" step ="1" value ="5">Jó<br>
-                            Sport <input type="text" list="sportok" name="sport" placeholder="Adja meg, ha sportol">
+                            Rossz<input id="kozerzet" name="kozerzet" type="range" min="0" max="10" step ="1" value ="5">Jó<br>
+                            Írjon pár sort a közérzetéről:<br><input type="text" name="leiras" placeholder="Ide írhat" size="50"><br>
+                            Sport <input type="text" list="sportok" name="sport" placeholder="Adja meg, mit sportol">
                             <datalist id="sportok">
                                 <option value="Kajak">
                                 <option value="Futás">
@@ -97,6 +108,8 @@
                 </tr>
                 </table>
             </form>
+            
+            <script src="../JS/validator.js"></script>
             <script src="../JS/fogorvos_rendeles.js" ></script>
         
     </div>
