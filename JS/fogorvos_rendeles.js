@@ -1,5 +1,6 @@
 document.getElementById("osszeg").addEventListener("click", osszegzo);
 document.getElementById("elkuld").addEventListener("click", osszegzo);
+document.getElementById("elkuld").addEventListener("click", kozerzet_javito);
 
 function osszegzo(){
     let ertek=0;
@@ -11,4 +12,10 @@ function osszegzo(){
     if (document.getElementById("kezeles_06").checked) ertek=ertek+13000;
     if (document.getElementById("kezeles_07").checked) ertek=ertek+41000;
     document.getElementById("eredmeny").value=ertek;
+}
+
+function kozerzet_javito(){
+    if (document.getElementById("kozerzet").value<4){
+        alert("Ne légy szomorú, inkább olvasss egy viccet: A kannibálok szigetén eltéved a tudóscsoport egyik tagja. Hosszas bolyongás után őslakosokba botlik: – Elnézést, nem látták véletlenül a kollégáimat? – De igen, velük már több ízben is találkoztunk!")
+    }
 }
