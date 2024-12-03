@@ -1,13 +1,41 @@
 Kalocsai Balázs
+
 Főoldal linkje(Github pages): https://kbalazs007.github.io/weblap_rendelo/HTML/01_Rendelo.html
 
-Tartalmi források:
-	- Kisecsetről: https://hu.wikipedia.org/wiki/Kisecset
-	- Rendelőfelújítás: Kitaláció
+Weboldal leírása: Kisecset falu fikcionálisan létező, közösen orvosi és fogorvosi rendelőjének a weboldala. Bemutatja röviden a falu történelmét, majd képekben ábrázolja a felújított egészségügyi egységet. Ismerteti a dolgozókat, valamint űrlapon keresztül interakciót biztosít a felhasználó számára.
+
+Saját JS:
+	- 01_Rendelo.html (fő)oldalon JS/orvos.js:
+
+		Az volt a célom, hogy egy egyszerű képnél több információt adjak át a dolgozókról. Fontos volt, hogy ezt a felhasználó interakcióval ismerhesse meg, ezzel is növelve a felhasználói élményt. Az ikonok segítségével pedig a tartalom értelmezését tettem egyszerűbbé.
+
+		A kód addEventListener "click" interakcióra aktiválódik és a gombnak megfelelően kicseréli a kép forrását (source), így könnyedén cserélhető, értelmezhető. (Továbbá tömörítettem a képeken, tehát a betöltést akadásmentesítésén is dolgoztam.)
+	
+	- 04_Arlista oldalon fogorvos_rendeles.js:
+
+		Célom volt, hogy rendelések felvételére alkalmas oldalt készíthessek, továbbá, hogy a felhasználó tisztába legyen rendelése összegéről (osszegzo). Egy kicsit vidámmá tettem azoknak a napját, akik a közérzeti eredmények alapján, akár örülhetnek neki (kozerzet_javito).
+
+		Itt is addEventListener "click" segítségével hívtam meg a függvényeket, egy változóban tároltam el a rendelések összegét melyet a megfelelő gombbal kiírok egy textboxba, végül ez az összeg kerülne elküldésre a php szervernek (osszegzo). A range imputtal beérkező adat alapján egy felugró ablak jelenik meg egy zseniális vicc.
+
+Egyedi fonttípus használata:
+	Az egységes design miatt az oldalon egy fonttípust használtam. Google fonts oldalról töltöttem le a Roboto fonttípust és adtam hozzá a weboldalhoz.
+	- https://fonts.google.com/specimen/Roboto		
 
 Képek:
 	Ikonok:
 		- https://www.flaticon.com
+		- azon belül free to use icons
 	Galéria:
 		- https://unsplash.com
 		- A weboldalon a "Free" szűrővel keresve(!)
+Átvett JS:
+	Galéria:
+		- https://kenwheeler.github.io/slick/
+		- https://jquery.com/
+	Validator:
+		- https://github.com/jquery-validation/jquery-validation/releases/tag/1.19.5
+		- https://jquery.com/download/
+
+Tartalmi források:
+	- Kisecsetről: https://hu.wikipedia.org/wiki/Kisecset
+	- Rendelőfelújítás: Kitaláció
